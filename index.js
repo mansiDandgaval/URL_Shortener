@@ -46,7 +46,7 @@ app.get('/:shortid', async (req, res) => {
 
 app.post('/delete',  (req, res, next) => {
 	var id = { id: req.body.to_be_delete };
-	ShortURL.findByIdAndDelete((id), 
+	ShortURL.findByIdAndDelete((id.id), 
     function(err, data) {
         if(err){
             console.log(err);
